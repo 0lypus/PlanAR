@@ -72,6 +72,60 @@
         .evento-tarjeta strong {
             color: #667eea;
         }
+        
+        .acciones {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 30px 0 10px;
+        }
+        
+        .acciones button {
+            background: rgba(255, 255, 255, 0.85);
+            color: #333;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 999px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        
+        .acciones button:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+        
+        .mensaje {
+            text-align: center;
+            color: #f7f7f7;
+            margin-top: 14px;
+            font-size: 1.05em;
+        }
+        
+        #categorias {
+            max-width: 700px;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+        }
+        
+        #categorias ul {
+            list-style: none;
+            padding: 0;
+            display: inline-flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        #categorias li {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 10px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
     </style>
 </head>
 
@@ -100,8 +154,48 @@
         </div>
     </div>
 
+    <div class="acciones">
+        <button type="button" id="btnCategorias">Mostrar categorías</button>
+        <button type="button" id="btnReservar">Reservar evento</button>
+    </div>
 
+    <div id="categorias"></div>
+    <div id="mensaje" class="mensaje"></div>
 
+    <script>
+        function reservar() {
+            document.getElementById("mensaje").innerHTML = "Reserva realizada correctamente";
+        }
+
+        function mostrarCategorias() {
+            const categorias = [
+                "Conciertos",
+                "Ferias",
+                "Deportes"
+            ];
+
+            let contenido = "<h3>Categorías disponibles</h3><ul>";
+            categorias.forEach(categoria => {
+                contenido += `<li>${categoria}</li>`;
+            });
+            contenido += "</ul>";
+
+            document.getElementById("categorias").innerHTML = contenido;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const btnCategorias = document.getElementById("btnCategorias");
+            const btnReservar = document.getElementById("btnReservar");
+
+            if (btnCategorias) {
+                btnCategorias.addEventListener("click", mostrarCategorias);
+            }
+
+            if (btnReservar) {
+                btnReservar.addEventListener("click", reservar);
+            }
+        });
+    </script>
 </body>
 
 </html>
