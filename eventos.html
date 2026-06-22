@@ -1,5 +1,107 @@
 <html>
 
+<head>
+    <title>PlanAR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .contenedor-tarjetas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .evento-tarjeta {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            width: 280px;
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .evento-tarjeta:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            border-left-color: #764ba2;
+        }
+        
+        .evento-tarjeta h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .evento-tarjeta p {
+            color: #666;
+            text-align: left;
+            margin: 10px 0;
+            font-size: 0.95em;
+        }
+        
+        .evento-tarjeta strong {
+            color: #667eea;
+        }
+    </style>
+</head>
 
+<body>
+
+    <h1>Bienvenidos a PlanAR</h1>
+    <p>Descubre eventos, recitales, ferias y actividades culturales.</p>
+
+    <div class="contenedor-tarjetas">
+        <div class="evento-tarjeta">
+            <h2>Concierto de Rock</h2>
+            <p><strong>Fecha:</strong> 15 de julio de 2026</p>
+            <p><strong>Lugar:</strong> Plaza de la Musica, Córdoba</p>
+        </div>
+
+        <div class="evento-tarjeta">
+            <h2>Festival de Arte Contemporáneo</h2>
+            <p><strong>Fecha:</strong> 22 de agosto de 2026</p>
+            <p><strong>Lugar:</strong> Centro Cultural Recoleta, Buenos Aires</p>
+        </div>
+
+        <div class="evento-tarjeta">
+            <h2>Feria Internacional de Tecnología</h2>
+            <p><strong>Fecha:</strong> 10 de septiembre de 2026</p>
+            <p><strong>Lugar:</strong> Predio Ferial La Rural, Buenos Aires</p>
+        </div>
+    </div>
+
+
+
+</body>
 
 </html>
